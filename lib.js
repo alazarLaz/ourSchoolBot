@@ -17,7 +17,7 @@ doesExist = function (teacherID,section,subject,type,fileURL){
     
     let solution = null;
 
-    let db = new sqlite3.Database('./database/botdata.db', sqlite3.OPEN_READWRITE, (err) => {
+    let db = new sqlite3.Database('./botdata.db', sqlite3.OPEN_READWRITE, (err) => {
         if (err) {
             return console.error(err.message);
         }
@@ -41,7 +41,7 @@ exports._exist = function (fileURL){
     
   let solution = null;
 
-  let db = new sqlite3.Database('./database/botdata.db', sqlite3.OPEN_READWRITE, (err) => {
+  let db = new sqlite3.Database('./botdata.db', sqlite3.OPEN_READWRITE, (err) => {
       if (err) {
           return console.error(err.message);
       }
@@ -70,7 +70,7 @@ exports._exist = function (fileURL){
  */
 exports._deleteDoc =function (teacherID,grade,section,subject,type,fileURL){
     let sol = null;
-    let db = new sqlite3.Database('./database/botdata.db', sqlite3.OPEN_READWRITE, (err) => {
+    let db = new sqlite3.Database('./botdata.db', sqlite3.OPEN_READWRITE, (err) => {
       if (err) {
         return console.error(err.message);
       }
@@ -100,7 +100,7 @@ exports._deleteDoc =function (teacherID,grade,section,subject,type,fileURL){
  */
   exports._viewer= function (teacherID,grade,section,subject,type){
     let sol = null;
-    let db = new sqlite3.Database('./database/botdata.db', sqlite3.OPEN_READWRITE, (err) => {
+    let db = new sqlite3.Database('./botdata.db', sqlite3.OPEN_READWRITE, (err) => {
       if (err) {
         return console.error(err.message);
       }
@@ -124,7 +124,7 @@ exports._deleteDoc =function (teacherID,grade,section,subject,type,fileURL){
  * @param(teacherID)
  */
   exports._addTeacher = function (teacherID){
-    let db = new sqlite3.Database('./database/botdata.db', sqlite3.OPEN_READWRITE, (err) => {
+    let db = new sqlite3.Database('./botdata.db', sqlite3.OPEN_READWRITE, (err) => {
       if (err) {
         return console.error(err.message);
       }
@@ -155,7 +155,7 @@ exports._deleteDoc =function (teacherID,grade,section,subject,type,fileURL){
    */
 
   exports._addBook = function(teacherID,grade,section,subject,type,fileurl){
-      let db = new sqlite3.Database('./database/botdata.db', sqlite3.OPEN_READWRITE, (err) => {
+      let db = new sqlite3.Database('./botdata.db', sqlite3.OPEN_READWRITE, (err) => {
           if (err) {
             return console.error(err.message);
           }
@@ -187,7 +187,7 @@ exports._deleteDoc =function (teacherID,grade,section,subject,type,fileURL){
  *  */  
 exports._hasAccess = function(TID){
     let  autenticate=null;
-    let db = new sqlite3.Database('./database/botdata.db', sqlite3.OPEN_READWRITE, (err) => {
+    let db = new sqlite3.Database('./botdata.db', sqlite3.OPEN_READWRITE, (err) => {
         if (err) {
           return console.error(err.message);
         }
@@ -213,7 +213,7 @@ exports._hasAccess = function(TID){
  */
 exports._getArray = (id)=>{
   let Grades = null;
-    let db = new sqlite3.Database('./database/botdata.db', sqlite3.OPEN_READWRITE, (err) => {
+    let db = new sqlite3.Database('./botdata.db', sqlite3.OPEN_READWRITE, (err) => {
       if (err) {
         return console.error(err.message);
       }
@@ -338,7 +338,7 @@ exports._allowedSubject = (TID,selectedSubject)=>{
       
   let solution = null;
 
-  let db = new sqlite3.Database('./database/botdata.db', sqlite3.OPEN_READWRITE, (err) => {
+  let db = new sqlite3.Database('./botdata.db', sqlite3.OPEN_READWRITE, (err) => {
       if (err) {
           return console.error(err.message);
       }
@@ -419,7 +419,7 @@ exports._deleteFile = (filename)=>{
 }
 exports._fetchBook = (query,grade,section,subject,type)=>{
     let pdfs = null;
-    let db = new sqlite3.Database('./database/botdata.db', sqlite3.OPEN_READWRITE, (err) => {
+    let db = new sqlite3.Database('./botdata.db', sqlite3.OPEN_READWRITE, (err) => {
       if (err) {
         return console.error(err.message);
       }
